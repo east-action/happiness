@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Zeit und Datum eintragen</h1>
+        
+        <form id="receiptForm" novalidate>
+            <div class="form-group">
+                <label for="number">Ticketnummer (4 Zahlen)</label>
+                <input type="text" id="number" maxlength="4" inputmode="numeric" placeholder="1234" autocomplete="off">
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="startTime">Anfangszeit (HHMM)</label>
+                    <input type="text" id="startTime" maxlength="4" inputmode="numeric" placeholder="1234" autocomplete="off">
+                </div>
+
+                <div class="form-group">
+                    <label for="date">Datum (TTMMJJ)</label>
+                    <input type="text" id="date" maxlength="6" inputmode="numeric" placeholder="010125" autocomplete="off">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="endTime">Parkzeitende (HHMM)</label>
+                <input type="text" id="endTime" maxlength="4" inputmode="numeric" placeholder="1234" autocomplete="off">
+            </div>
+
+            <div class="form-group">
+                <label for="points">Preis (050-950 cent)</label>
+                <input type="text" id="points" maxlength="3" inputmode="numeric" placeholder="050" autocomplete="off">
+            </div>
+
+            <button type="submit" id="downloadBtn">Bon erstellen</button>
+<div class="info-note">
+    <p class="info-text">Pro Tag werden insgesamt ca. 150 Bons ausgedruckt. Verwendung nur zu eigennützigen Zwecken.</p>
+    <img src="assets/info.jpg" alt="Инфо" class="info-image">
+</div>
+        </form>
+
+        <canvas id="receiptCanvas" width="634" height="877" style="display: none;"></canvas>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
